@@ -127,7 +127,7 @@ BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_FLASH_BLOCK_SIZE := 131072
 
 # Build a separate vendor.img
-TARGET_COPY_OUT_VENDOR := system
+TARGET_COPY_OUT_VENDOR := vendor
 
 BOARD_HAL_STATIC_LIBRARIES := libdumpstate.bullhead
 
@@ -163,5 +163,7 @@ EXTENDED_FONT_FOOTPRINT := true
 # CM Hardware
 BOARD_USES_CYANOGEN_HARDWARE := true
 BOARD_HARDWARE_CLASS := hardware/cyanogen/cmhw
+
+TARGET_RELEASETOOL_OTA_FROM_TARGET_SCRIPT := ./build/tools/releasetools/ota_from_target_files -b device/lge/bullhead/update-binary
 
 -include vendor/lge/bullhead/BoardConfigVendor.mk
